@@ -1,5 +1,3 @@
-import os
-#os.chdir('/Users/varunvb')
 data = open('/Users/varunvb/pythontestdelete')
 for each_line in data:
     if not each_line.find(':') == -1:
