@@ -12,16 +12,17 @@ try:
                 other.append (line_spoken)
         except ValueError:
             pass
-    data.close()
-
-except IOError:
-    print("The data file is missing")
+except IOError as err:
+    print("The data file is missing: " + str(err))
+    if  'data' in locals():
+        data.close()
 try:
     outfile1 = open("outputfile1", "w")
     outfile2 = open("outputfile2", "w")
     print(man, file=outfile1)
     print(other, file=outfile2)
-    outfile1.close()
-    outfile2.close()
 except IOError:
     print("can't open files to write")
+finally:
+        outfile1.close()
+        outfile2.close()
