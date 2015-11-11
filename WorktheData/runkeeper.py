@@ -25,10 +25,10 @@ for each_string in mikey_run:
     clean_mikey.append(sanitize(each_string))
 for each_string in sarah_run:
     clean_sarah.append(sanitize(each_string))
-print(sorted(clean_julie))
-print(sorted(clean_james))
-print(sorted(clean_mikey))
-print(sorted(clean_sarah))
+print(sorted(clean_julie, reverse=True))
+print(sorted(clean_james, reverse=True))
+print(sorted(clean_mikey, reverse=True))
+print(sorted(clean_sarah, reverse=True))
 
 
 
