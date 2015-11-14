@@ -13,9 +13,8 @@ def load_coach_data (filename):
         with open(filename) as data:
             coach_data = data.readline()
             coach_data = coach_data.strip().split(',')
-            (athlete_name, athlete_dob) = coach_data.pop(0), coach_data.pop(0)
-            athlete_data = {'Name': athlete_name, 'Date-Of-Birth': athlete_dob, 'Times': coach_data }
-            return (athlete_data)
+            #(athlete_name, athlete_dob) = coach_data.pop(0), coach_data.pop(0)
+            return ({'Name': coach_data.pop(0), 'Date-Of-Birth': coach_data.pop(0), 'Times': str(sorted(set([sanitizedata.sanitize(time_string) for time_string in coach_data]))[0:3])})
     except IOError as ioerr:
         print('File cannot be open for reading: ', str(ioerr))
         return (None)
