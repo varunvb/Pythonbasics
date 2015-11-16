@@ -9,6 +9,7 @@ class Athlete:
 
     def top3(self):
         return (sorted(set([sanitize(each_string) for each_string in self.times]))[0:3])
+    def add_times ()
 
     def add_time(self, ad_time):
         self.times.append(ad_time)
@@ -33,7 +34,7 @@ vera = Athlete('Vera Vi', '')
 vera.add_times(['2.30', '2.10', '2.40', '2.30'])
 print(vera.top3())
 mikey.add_times(['2.20', '2.00', '2.10'])
-print(sarah.name +'\'s top 3 speeds are: ' + str(sarah.top3()))
+print(sarah.name +'\'s top 3 speeds are: ' + str(sarah.top()))
 print(james.name + '\'s fastest times are: ' + str(james.top3()))
 print(mikey.name + '\'s fastest times are: ' + str(mikey.top3()))
 print(julie.name + '\'s fastest times are: ' + str(julie.top3()))
