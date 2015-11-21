@@ -38,14 +38,6 @@ def get_from_store ():
     except IOError as ioerr:
         print('File error (get_from_store): ' + str(ioerr))
     return (all_athletes)
-the_files = ['james2.txt', 'julie2.txt', 'mikey2.txt', 'sarah2.txt']
-data = put_to_store(the_files)
-for each_athlete in data:
-    print (data[each_athlete].name + "  " + data[each_athlete].dob)
-
-data_copy = get_from_store()
-for each_athlete in data_copy:
-    print(data_copy[each_athlete].name + " " + data_copy[each_athlete].dob)
 
 
 
