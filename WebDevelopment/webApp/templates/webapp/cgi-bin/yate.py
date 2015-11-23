@@ -1,3 +1,4 @@
+
 from string import Template
 
 def start_response(resp="text/html"):
@@ -40,4 +41,4 @@ def header(header_text, header_level=2):
            '</h' + str(header_level) + '>')
 
 def para(para_text):
-    return('<p>' + para_text + '</p>')
+    return('<p>' + para_text + '</p>') 
